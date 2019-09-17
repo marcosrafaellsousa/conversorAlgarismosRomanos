@@ -18,7 +18,7 @@ public class Conversor {
             return 500;
         if (r == 'M')
             return 1000;
-        else throw new IllegalArgumentException();
+        throw new IllegalArgumentException();
     }
 
     // Encontra o valor decimal de um algarismo romano
