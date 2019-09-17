@@ -10,13 +10,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Digite o numero em algarismo romano");
-        String algarismos = scanner.nextLine();
-        algarismos = algarismos.toUpperCase();
-        Conversor ob = new Conversor();
+        String numeroEmRomano = scanner.nextLine();
+        numeroEmRomano = numeroEmRomano.toUpperCase();
+        Conversor conversor = new Conversor();
 
         // Verifica se os algarismos sao validos
         try {
-            System.out.println("O valor inteiro dos algarismos digitados e: " + ob.romanToDecimal(algarismos));
+            System.out.println("O valor inteiro dos algarismos digitados e: " + conversor.romanoParaDecimal(numeroEmRomano));
         } catch (IllegalArgumentException e) {
             System.out.println("Algarismos invalidos");
         } catch (LimitExceededException e) {
