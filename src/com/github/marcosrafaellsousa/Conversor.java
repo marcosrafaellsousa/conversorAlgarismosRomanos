@@ -1,5 +1,7 @@
 package com.github.marcosrafaellsousa;
 
+import javax.naming.LimitExceededException;
+
 public class Conversor {
 
     // Retorna o valor de um simbolo romano ou um erro caso os valores sejam invalidos
@@ -22,7 +24,7 @@ public class Conversor {
     }
 
     // Encontra o valor decimal de um algarismo romano
-    int romanToDecimal(String str) {
+    int romanToDecimal(String str) throws LimitExceededException {
         int res = 0;
 
         for (int i = 0; i < str.length(); i++) {
@@ -44,6 +46,9 @@ public class Conversor {
             }
         }
 
+        if (res > 4999) {
+            throw new LimitExceededException();
+        }
         return res;
     }
 }

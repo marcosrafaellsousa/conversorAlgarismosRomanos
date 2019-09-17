@@ -1,5 +1,6 @@
 package com.github.marcosrafaellsousa;
 
+import javax.naming.LimitExceededException;
 import java.util.Scanner;
 
 public class Main {
@@ -18,6 +19,8 @@ public class Main {
             System.out.println("O valor inteiro dos algarismos digitados e: " + ob.romanToDecimal(algarismos));
         } catch (IllegalArgumentException e) {
             System.out.println("Algarismos invalidos");
+        } catch (LimitExceededException e) {
+            System.out.println("O limite de 4999 foi excedido");
         }
     }
 }
